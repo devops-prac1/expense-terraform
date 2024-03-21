@@ -8,7 +8,6 @@ resource "aws_instance" "instance" {
   }
 }
 
-
 resource "null_resource" "ansible" {
   provisioner "remote-exec" {
 
@@ -25,8 +24,6 @@ resource "null_resource" "ansible" {
     ]
   }
 }
-
-
 
 resource "aws_route53_record" "record" {
   name    = "${var.component}-${var.env}"
