@@ -20,7 +20,7 @@ resource "null_resource" "ansible" {
 #  helping to commit
     inline = [
       "sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/devops-prac1/expense-ansible.git -e expense.yml -e env=${var.env} -e role_name=${var.component}"
+      "ansible-pull -i localhost, -U https://github.com/devops-prac1/expense-ansible.git -e expense.yml -e env=${var.env}  -e  role_name=${var.component}"
     ]
   }
 }
