@@ -1,4 +1,5 @@
 module "frontend" {
+  depends_on = [module.backend]
   source = "./modules/app"
   instance_type = var.instance_type
   component     = "frontend"
@@ -6,6 +7,7 @@ module "frontend" {
   ssh_pass= var.ssh_pass
   env = var.env
   zone_id = var.zone_id
+
 
 }
 module "backend" {
