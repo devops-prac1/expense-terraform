@@ -34,5 +34,6 @@
    subnet_cidr_block = var.subnet_cidr_block
    default_vpc_id    = var.default_vpc_id
    default_vpc_cidr  = var.default_vpc_cidr
+   default_route_table_id = var.default_route_table_id
  }
 
