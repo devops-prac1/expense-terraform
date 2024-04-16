@@ -8,3 +8,9 @@
   default_vpc_cidr  = "172.31.0.0/16"
   default_vpc_id    = "vpc-0b75324b013066007"
   default_route_table_id = "rtb-04604ca884c76d52d"
+
+
+  frontend_subnets   = ["10.10.0.0/27", "10.10.0.32/27"]
+  backend_subnets    = ["10.10.0.64/27", "10.10.0.96/27"]
+  db_subnets         = ["10.10.0.128/27", "10.10.0.160/27"]
+  availability_zones = ["us-east-1a", "us-east-1b"]
