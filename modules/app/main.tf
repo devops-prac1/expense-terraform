@@ -20,11 +20,7 @@ resource "aws_security_group" "main" {
   tags = {
     Name = "${var.component}-${var.env}-sg"
   }
-  lifecycle {
-    ignore_changes = [
-      ami
-    ]
-  }
+
 }
 
   resource "aws_instance" "instance" {
@@ -38,6 +34,11 @@ resource "aws_security_group" "main" {
     monitor = "yes"
     env     =  var.env
   }
+    lifecycle {
+      ignore_changes = [
+        ami
+      ]
+    }
 }
 
 resource "null_resource" "ansible" {
