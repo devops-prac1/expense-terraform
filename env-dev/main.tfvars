@@ -17,3 +17,6 @@
   availability_zones = ["us-east-1a", "us-east-1b"]
   bastion_nodes      = ["172.31.95.77/32"]
   prometheus_nodes   = ["172.31.92.130/32"]
+  certificate_arn    = "arn:aws:acm:us-east-1:381492144586:certificate/4154b19b-e74b-48e4-8e96-bc3662eefead"
+
+  #when u go to certificate manager -certificate id-u can copy the above arn
