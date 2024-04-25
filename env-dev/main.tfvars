@@ -18,5 +18,6 @@
   bastion_nodes      = ["172.31.95.77/32"]
   prometheus_nodes   = ["172.31.92.130/32"]
   certificate_arn    = "arn:aws:acm:us-east-1:381492144586:certificate/4154b19b-e74b-48e4-8e96-bc3662eefead"
+  kms_key_id         =  "arn:aws:kms:us-east-1:381492144586:key/24be706e-c6f3-45ac-9495-02038e3ba952"
 
   #when u go to certificate manager -certificate id-u can copy the above arn
