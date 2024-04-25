@@ -45,7 +45,13 @@ resource "aws_security_group" "main" {
   vpc_security_group_ids = [aws_security_group.main.id]
   subnet_id = var.subnets[0]
 
-  tags = {
+    root_block_device {
+      encrypted  = true
+      kms_key_id = var.kms_key_id
+    }
+
+
+    tags = {
     Name = var.component
     monitor = "yes"
     env     =  var.env
@@ -58,6 +64,9 @@ resource "aws_security_group" "main" {
 }
 
 resource "null_resource" "ansible" {
+  triggers = {
+    instance = aws_instance.instance.id
+  }
   connection {
     type     = "ssh"
     user     = jsondecode(data.vault_generic_secret.ssh.data_json).ansible_user
