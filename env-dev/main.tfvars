@@ -21,3 +21,7 @@
   kms_key_id         =  "arn:aws:kms:us-east-1:381492144586:key/24be706e-c6f3-45ac-9495-02038e3ba952"
 
   #when u go to certificate manager -certificate id-u can copy the above arn
+
+  # ASG
+  max_capacity = 5
+  min_capacity = 1
